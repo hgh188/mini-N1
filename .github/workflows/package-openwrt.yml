@@ -103,13 +103,7 @@ jobs:
         commit: main
         token: ${{ secrets.RELEASES_TOKEN }}
         artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
-        body: |
-          - 默认IP：192.168.1.1 默认密码：password (WiFi密码同）
-          - 当前使用版本:【编译前的最后一次➦[主源码](https://github.com/coolsnowwolf/lede)更新记录】
-          - 此版因集成插件比自用精简版更多，无法做到每日更新。
-          - 因变动较大，从60或以下版本升级到61或更高版本建议**全新刷入**或者**不保留配置**进行升级。
-          - 常见问题及注意事项请参考恩山F大➦[最新帖](https://www.right.com.cn/forum/thread-4076037-1-1.html)
-          ${{ env.useVersionInfo }}
+        
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
